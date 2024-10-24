@@ -2,8 +2,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
+import Header from "@/components/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,28 +16,26 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "SOTA Lab Cybersecurity Training",
+  title: "The SOTA Lab Cybersecurity Training",
   description: "Interactive cybersecurity demos and training",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SidebarProvider>
-          <AppSidebar />
-          <main className="ml-[var(--sidebar-width)]">
-            <SidebarTrigger />
-            {children}
-          </main>
-        </SidebarProvider>
+        {/* Top Navigation Menu */}
+        <Header />
+        {children}
       </body>
     </html>
   );
 }
+
+// Include the Header component from the home page code
