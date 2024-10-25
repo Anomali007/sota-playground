@@ -62,11 +62,14 @@ export function AppSidebar() {
           {/* User Avatar */}
           <div className="p-4 flex items-center space-x-2">
             <Avatar className="h-8 w-8">
-              <AvatarImage src="/path/to/avatar.jpg" alt="User Name" />
-              <AvatarFallback>UN</AvatarFallback>
+              <AvatarImage
+                src={`https://github.com/shadcn.png`}
+                alt={"Morty Smith"}
+              />
+              <AvatarFallback>MS</AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
-              <p className="font-semibold">User Name</p>
+              <p className="font-semibold">Morty Smith</p>
               <Link
                 href="/profile"
                 className="text-sm text-gray-600 hover:text-gray-900"
