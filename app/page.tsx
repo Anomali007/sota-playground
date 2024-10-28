@@ -212,10 +212,11 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Logo variant="white" />
-              <span className="font-bold text-xl text-white">SOTA Lab</span>
+              <span className="font-bold text-xl text-white">The SOTA Lab</span>
             </Link>
             <div className="mt-6 md:mt-0 text-gray-400">
-              &copy; {new Date().getFullYear()} SOTA Lab. All rights reserved.
+              &copy; {new Date().getFullYear()} The SOTA Lab. All rights
+              reserved.
             </div>
           </div>
         </div>
@@ -334,7 +335,7 @@ function PricingCard({ tier }: { tier: Tier }) {
 const faqs = [
   {
     id: 1,
-    question: "What is SOTA Lab?",
+    question: "What is The SOTA Lab?",
     answer:
       "The SOTA Lab provides interactive cybersecurity demos and tools to help you enhance your cybersecurity skills.",
   },
