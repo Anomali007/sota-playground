@@ -60,7 +60,7 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         {/* User Avatar */}
-        <div className="p-4 flex items-center space-x-2">
+        <div className={`flex items-center p-2 ${open && "p-4 space-x-2"}`}>
           <Avatar className="h-8 w-8">
             <AvatarImage
               src={`https://github.com/shadcn.png`}
@@ -68,15 +68,17 @@ export function AppSidebar() {
             />
             <AvatarFallback>MS</AvatarFallback>
           </Avatar>
-          <div className="flex flex-col">
-            <p className="font-semibold">Morty Smith</p>
-            <Link
-              href="/profile"
-              className="text-sm text-gray-600 hover:text-gray-900"
-            >
-              View Profile
-            </Link>
-          </div>
+          {open && (
+            <div className="flex flex-col">
+              <p className="font-semibold">Morty Smith</p>
+              <Link
+                href="/profile"
+                className="text-sm text-gray-600 hover:text-gray-900"
+              >
+                View Profile
+              </Link>
+            </div>
+          )}
         </div>
         {/* Menu Items */}
         <SidebarGroup>
@@ -314,7 +316,9 @@ export function AppSidebar() {
         </SidebarMenu>
         <SidebarSeparator />
         <div className="p-4">
-          <p className="text-sm">&copy; {new Date().getFullYear()} SOTA Lab</p>
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()}The SOTA Lab
+          </p>
         </div>
       </SidebarFooter>
     </Sidebar>
