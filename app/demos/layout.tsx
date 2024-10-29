@@ -16,10 +16,10 @@ export default function RootLayout({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="ml-[var(--sidebar-width)]">
+      <div className="ml-[calc(var(--sidebar-width)/2)]">
         <SidebarTrigger />
         {children}
-      </main>
+      </div>
     </SidebarProvider>
   );
 }
