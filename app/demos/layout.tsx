@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { PaginationControls } from "@/components/pagination-controls";
 
 export const metadata: Metadata = {
   title: "The SOTA Lab Cybersecurity Training",
@@ -19,6 +20,7 @@ export default function RootLayout({
       <div className="ml-[calc(var(--sidebar-width)/2)]">
         <SidebarTrigger />
         {children}
+        <PaginationControls />
       </div>
     </SidebarProvider>
   );
